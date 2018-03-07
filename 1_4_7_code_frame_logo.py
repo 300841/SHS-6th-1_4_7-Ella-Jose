@@ -95,3 +95,5 @@ def frame_all_images(directory=None, color=(175,255,175), width=0.05):
         #save the altered image, suing PNG to retain transparency
         new_image_filename = os.path.join(new_directory, filename + '.png')
         new_image.save(new_image_filename)    
+
+
