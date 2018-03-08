@@ -6,12 +6,16 @@ from PIL import Image
 
 
 def pasting(original_image):
+    '''opens an image and pastes a small version of the logo onto the image'''
     
     image = original_image
     logo = Image.open('logo.jpg')
+    # resize the logo image to make it the right size
     logo_small = logo.resize((image.height/7, image.width/10))
+    #define position of the logo
     position = ((0,0))
     result = image.copy()
+    #paste the logo onto the image
     result.paste(logo_small, position)
     return result
     
